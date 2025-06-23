@@ -1,5 +1,9 @@
 function fetchBooks() {
   // To pass the tests, don't forget to return your fetch!
+  let gameOfThrones = "https://anapioficeandfire.com/api/books"
+  return fetch(gameOfThrones)
+  .then(res => res.json())
+  .then(data => renderBooks(data))
   
 }
 
